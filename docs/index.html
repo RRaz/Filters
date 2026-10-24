@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RRAZ filters for Affinity 3</title>
+<meta name="description" content="Standalone RRAZ filters for Affinity 3 on Windows. Download, installation sheets and photographer's notes.">
+<style>
+  :root { --ink:#1d2329; --panel:#1f2933; --gold:#b08d57; --line:#d7dde1; --muted:#4a545d; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: #f6f7f8; color: var(--ink);
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size: 17px; line-height: 1.55;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px 56px; }
+  header {
+    background: var(--panel); color: #fff; padding: 34px 0 30px; margin-bottom: 28px;
+    border-bottom: 4px solid var(--gold);
+  }
+  header .wrap { padding-bottom: 0; }
+  h1 { margin: 0; font-size: 34px; font-weight: 600; letter-spacing: .2px; }
+  .sub { margin-top: 6px; color: #d8c7a8; font-size: 16px; }
+  h2 { font-size: 20px; margin: 36px 0 10px; padding-bottom: 6px; border-bottom: 2px solid var(--gold); }
+  p { margin: 10px 0; }
+  .warning {
+    border-left: 5px solid #a3542b; background: #fbf3ed;
+    padding: 12px 16px; margin: 22px 0 4px;
+  }
+  .warning strong { color: #7d3d1f; }
+  .card {
+    background: #fff; border: 1px solid var(--line); border-radius: 6px;
+    padding: 20px 22px; margin: 16px 0;
+  }
+  .card h3 { margin: 0 0 4px; font-size: 21px; }
+  .card .needs { color: var(--muted); font-size: 15px; margin: 0 0 12px; }
+  .links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+  a.button {
+    display: inline-block; text-decoration: none; font-weight: 600;
+    background: var(--panel); color: #fff; padding: 11px 18px; border-radius: 4px;
+  }
+  a.button.alt { background: #fff; color: var(--panel); border: 1px solid #b9c2c9; }
+  a.button:hover { background: #33414d; }
+  a.button.alt:hover { background: #eef1f3; }
+  code {
+    font-family: Consolas, "Courier New", monospace; font-size: 14.5px;
+    background: #eef1f3; padding: 2px 5px; border-radius: 3px;
+  }
+  ol { margin: 8px 0 8px 22px; padding: 0; }
+  ol li { margin: 7px 0; }
+  .muted { color: var(--muted); font-size: 15px; }
+  footer { margin-top: 44px; padding-top: 14px; border-top: 1px solid var(--line); color: #75808a; font-size: 14px; }
+  a { color: #0b5cad; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <h1>RRAZ filters for Affinity 3</h1>
+    <div class="sub">Standalone filters for Windows 10 and 11 (64-bit) &nbsp;·&nbsp; each with its own installer</div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="warning">
+    <strong>These filters only work on 16-bit rasterised images.</strong><br>
+    A 16-bit per channel pixel layer, in RGB or greyscale. 8-bit and 32-bit HDR documents cannot be processed.
+  </div>
+
+  <div class="card">
+    <h3>RRAZ Deblur</h3>
+    <p class="needs">Recovers detail from defocus and motion blur. Needs an NVIDIA graphics card with driver 580 or newer.</p>
+    <div class="links">
+      <a class="button" href="https://github.com/RRaz/Filters/releases/tag/deblur-1.0.0">Download and install</a>
+      <a class="button alt" href="deblur-install-and-check.pdf">Installation sheet (PDF)</a>
+      <a class="button alt" href="deblur-notes.pdf">Photographer’s notes (PDF)</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>RRAZ Depth</h3>
+    <p class="needs">Builds a 16-bit greyscale depth map from the active layer. Runs on the processor, so no graphics card is needed.</p>
+    <div class="links">
+      <a class="button" href="https://github.com/RRaz/Filters/releases/tag/depth-1.0.0">Download and install</a>
+      <a class="button alt" href="depth-install-and-check.pdf">Installation sheet (PDF)</a>
+      <a class="button alt" href="depth-notes.pdf">Notes (in preparation)</a>
+    </div>
+  </div>
+
+  <h2>Installing a filter</h2>
+  <ol>
+    <li>Click <strong>Download and install</strong> and download the setup, the runtime and the installation sheet.</li>
+    <li>Keep the setup and the runtime in the same folder, then run the setup. Do not unzip the runtime.</li>
+    <li>In Affinity, open <strong>Settings &gt; Photoshop Plugins</strong> and add
+      <code>%LOCALAPPDATA%\RRAZ\Affinity</code>.</li>
+  </ol>
+  <p class="muted">That folder is normally <code>C:\Users\&lt;you&gt;\AppData\Local\RRAZ\Affinity</code>. You only add it once: after that, every RRAZ filter you install appears in the menu. The setup finish page shows the exact address for your account.</p>
+  <p><a class="button alt" href="setup-affinity.pdf">Setting up the folder in Affinity (PDF)</a></p>
+
+  <h2>What this is</h2>
+  <p>Each filter is installed separately and removed separately. The install is per user, needs no administrator rights, and writes only inside <code>%LOCALAPPDATA%\RRAZ</code>. There is no account, no upload and no server: no image ever leaves the computer.</p>
+  <p class="muted">Each filter’s installation sheet carries its own algorithm credit and licence terms.</p>
+
+  <footer>RRAZ filters for Affinity 3 · © Ryan Raz 2026</footer>
+</div>
+
+</body>
+</html>
