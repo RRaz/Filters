@@ -6,6 +6,7 @@ own installer. **These filters only work on 16-bit rasterised images.**
 | Filter | What it does | Install | Notes & images |
 |---|---|---|---|
 | RRAZ Deblur | Recovers detail from defocus and motion blur. Requires an NVIDIA GPU and driver 580 or newer. | [Install & check](https://github.com/RRaz/Filters/releases/tag/deblur-1.0.0) | [Open](https://github.com/RRaz/Filters/tree/HEAD/Deblur/) |
+| RRAZ Depth | Builds a 16-bit greyscale depth map from the active layer. Runs on the CPU, so no graphics card is needed. | [Install & check](https://github.com/RRaz/Filters/releases/tag/depth-1.0.0) | [Open](https://github.com/RRaz/Filters/tree/HEAD/Depth/) |
 
 ## Installing a filter
 
