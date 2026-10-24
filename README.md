@@ -20,6 +20,15 @@ The filter then appears under **Filters > Plugins > RRAZ**. No account, upload
 or server is used. The install is per user and does not need administrator
 rights.
 
+## Adding the folder to Affinity
+
+The plug-in folder is added once, and the steps are the same for every RRAZ
+filter. They are illustrated here:
+[Setup filters affinity (PDF)](Setup%20filters%20affinity.pdf).
+
+If you already have an RRAZ filter working, the folder is already added: close
+and reopen Affinity and the new filter is in the menu.
+
 ## Notes and images
 
 The **Notes & images** link for each filter opens a folder with the
