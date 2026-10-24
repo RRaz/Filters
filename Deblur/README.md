@@ -6,7 +6,7 @@ installer. For installation, use the
 not this folder.
 
 - [Photographer’s notes (PDF)](Deblur.pdf)
-- [Example image (JPG)](Hiltown.jpg)
+- [Example image (JPG)](Hilltown.jpg)
 
 The setup, runtime and installation/check sheet are on the release page.
 
