@@ -3,25 +3,29 @@
 **Plain page with everything: <https://rraz.github.io/Filters/>**
 
 Standalone filters for Affinity 3 on Windows 10/11 (64-bit). Each filter has its
-own installer. **These filters only work on 16-bit rasterised images.**
+own installer and is downloaded as one zip. **These filters only work on 16-bit
+rasterised images.**
 
 | Filter | What it does | Download | Notes |
 |---|---|---|---|
-| RRAZ Deblur | Recovers detail from defocus and motion blur. Requires an NVIDIA GPU and driver 580 or newer. | [Deblur 1.0.0](https://github.com/RRaz/Filters/releases/tag/deblur-1.0.0) | [Notes (PDF)](https://rraz.github.io/Filters/deblur-notes.pdf) |
-| RRAZ Depth | Builds a 16-bit depth map from the selected pixel layer in Affinity. Runs on the CPU, so no graphics card is needed. | [Depth 1.0.0](https://github.com/RRaz/Filters/releases/tag/depth-1.0.0) | [Notes (PDF)](https://rraz.github.io/Filters/depth-notes.pdf) |
+| RRAZ Deblur | Recovers detail from defocus and motion blur. Requires an NVIDIA GPU and driver 580 or newer. | [Deblur 1.0.0](https://github.com/RRaz/Filters-Downloads/releases/tag/deblur-1.0.0) | [Notes (PDF)](https://rraz.github.io/Filters/deblur-notes.pdf) |
+| RRAZ Depth | Builds a 16-bit depth map from the selected pixel layer in Affinity. Runs on the CPU, so no graphics card is needed. | [Depth 1.0.0](https://github.com/RRaz/Filters-Downloads/releases/tag/depth-1.0.0) | [Notes (PDF)](https://rraz.github.io/Filters/depth-notes.pdf) |
 
 ## Installing a filter
 
-1. Open the download link and get the setup, the runtime and the installation
-   sheet.
-2. Keep the setup and runtime in the same folder. Run the setup.
-3. In Affinity, open **Settings > Photoshop Plugins** and add
+1. Download the zip for the filter. It contains the setup, the runtime, the
+   installation sheet and the checksums.
+2. Right-click the zip and choose **Extract All**. Windows makes a folder with
+   the same name. Delete the zip once it is extracted.
+3. Run the setup from that folder.
+4. In Affinity, open **Settings > Photoshop Plugins** and add
    `%LOCALAPPDATA%\RRAZ\Affinity`
    (normally `C:\Users\<you>\AppData\Local\RRAZ\Affinity`).
 
 The filter then appears under **Filters > Plugins > RRAZ**. No account, upload
 or server is used. The install is per user and does not need administrator
-rights.
+rights. After it works you can delete the extracted folder; the engine stays in
+`%LOCALAPPDATA%\RRAZ`.
 
 ## Adding the folder to Affinity
 
