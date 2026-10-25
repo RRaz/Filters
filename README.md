@@ -16,10 +16,11 @@ rasterised images.**
 1. Download the zip for the filter. It contains the setup, the runtime, the
    installation sheet and the checksums.
 2. Right-click the zip and choose **Extract All**. Choose the folder first: the
-   extracted files need as much space as the download. Delete the zip once it is
-   extracted.
+   zip and the extracted folder each need as much space as the download.
 3. Run the setup from that folder. It does not ask where to install: the engine
    goes to `%LOCALAPPDATA%\RRAZ` on your Windows drive.
+5. When it works, delete the zip and the folder you extracted, with everything in
+   it.
 4. In Affinity, open **Settings > Photoshop Plugins** and add
    `%LOCALAPPDATA%\RRAZ\Affinity`
    (normally `C:\Users\<you>\AppData\Local\RRAZ\Affinity`).
