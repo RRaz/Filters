@@ -28,7 +28,8 @@ are applied to the pixels themselves, so re-entering Develop starts again from
 the beginning, with every control reset.
 
 That is the point of a non-destructive stack: a change made in Develop shows at
-the top of the stack almost at once, and can be revisited later. **RRAZ Save DNG
+the top of the stack almost at once, and can be revisited and readjusted from the
+point you left them. **RRAZ Save DNG
 writes the 16-bit image as a raw file**, so a picture that started as a TIFF can
 be edited that way. It does not add dynamic range the TIFF never had.
 
