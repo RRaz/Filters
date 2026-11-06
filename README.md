@@ -14,17 +14,23 @@ rasterised images.**
 
 ## TIFF and raw files
 
-A TIFF opens as a finished picture: Affinity edits its pixels, and an earlier
-state survives only because you saved a copy under another name.
+A TIFF opens as a finished picture. Affinity edits its pixels, so a change is
+written into the image, and an earlier state survives only because you saved a
+copy under another name.
 
-A raw file opens in the Develop persona. Exposure, white balance and lens
-corrections stay adjustable, the settings are kept with the image, and a raw
-layer placed in a document can be developed again later. A TIFF has no raw data
-behind it, so it cannot be opened that way.
+A raw file is not changed by the Develop persona. The module works on its own
+output: the adjustments are kept with the layer, and when you re-enter Develop
+the controls are where you left them, ready for another change. The file on disk
+stays as it was.
 
-**RRAZ Save DNG writes the 16-bit image as a raw file**, which is what makes the
-Develop persona, and later re-development, possible for a picture that started
-as a TIFF. It does not add dynamic range the TIFF never had.
+A TIFF has no raw data behind it. Put through the same persona, the adjustments
+are applied to the pixels themselves, so re-entering Develop starts again from
+the beginning, with every control reset.
+
+That is the point of a non-destructive stack: a change made in Develop shows at
+the top of the stack almost at once, and can be revisited later. **RRAZ Save DNG
+writes the 16-bit image as a raw file**, so a picture that started as a TIFF can
+be edited that way. It does not add dynamic range the TIFF never had.
 
 ## Installing a filter
 

@@ -28,6 +28,14 @@
     padding: 12px 16px; margin: 22px 0 4px;
   }
   .warning strong { color: #7d3d1f; }
+  .panel {
+    background: #fff; border: 1px solid var(--line); border-left: 5px solid var(--gold);
+    border-radius: 6px; padding: 6px 22px 16px; margin: 26px 0 10px;
+  }
+  .panel h2 { margin: 18px 0 12px; border-bottom: 0; }
+  h2.split {
+    margin-top: 54px; padding-top: 30px; border-top: 1px solid var(--line);
+  }
   .card {
     background: #fff; border: 1px solid var(--line); border-radius: 6px;
     padding: 20px 22px; margin: 16px 0;
@@ -100,13 +108,16 @@
     <p class="muted">No installer: the zip holds two files to copy into the plug-in folder. See below.</p>
   </div>
 
+  <div class="panel">
   <h2>TIFF and raw files</h2>
-  <p>A TIFF opens as a finished picture. Affinity edits its pixels, and an earlier state survives only because you saved a copy under another name.</p>
-  <p>A raw file opens in the Develop persona. Exposure, white balance and lens corrections stay adjustable, the settings are kept with the image, and a raw layer placed in a document can be developed again later. A TIFF has no raw data behind it, so it cannot be opened that way.</p>
-  <p><strong>Save DNG writes the 16-bit image as a raw file</strong>, which is what makes the Develop persona, and later re-development, possible for a picture that started as a TIFF.</p>
+  <p>A TIFF opens as a finished picture. Affinity edits its pixels, so a change is written into the image, and an earlier state survives only because you saved a copy under another name.</p>
+  <p>A raw file is not changed by the Develop persona. The module works on its own output: the adjustments are kept with the layer, and when you re-enter Develop the controls are where you left them, ready for another change. The file on disk stays as it was.</p>
+  <p>A TIFF has no raw data behind it. Put through the same persona, the adjustments are applied to the pixels themselves, so re-entering Develop starts again from the beginning, with every control reset.</p>
+  <p>That is the point of a non-destructive stack: a change made in Develop shows at the top of the stack almost at once, and can be revisited later. <strong>Save DNG writes the 16-bit image as a raw file</strong>, so a picture that started as a TIFF can be edited that way.</p>
   <p class="muted">It does not add dynamic range the TIFF never had: the DNG starts from the same 16 bits. What changes is how the file may be edited, not how much is in it.</p>
+  </div>
 
-  <h2>Installing a filter</h2>
+  <h2 class="split">Installing a filter</h2>
   <ol>
     <li>Click <strong>Download package</strong>. Each filter is one zip containing the setup, the runtime, the installation sheet and the checksums.</li>
     <li>Right-click the zip and choose <strong>Extract All</strong>. Decide the folder first: the zip and the extracted folder each need as much space as the download.</li>
