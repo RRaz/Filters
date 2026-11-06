@@ -10,6 +10,21 @@ rasterised images.**
 |---|---|---|---|
 | RRAZ Deblur | Recovers detail from defocus and motion blur. Requires an NVIDIA GPU and driver 580 or newer. | [Deblur 1.0.0](https://github.com/RRaz/Filters-Downloads/releases/tag/deblur-1.0.0) | [Notes (PDF)](https://rraz.github.io/Filters/deblur-notes.pdf) |
 | RRAZ Depth | Builds a 16-bit depth map from the selected pixel layer in Affinity. Runs on the CPU, so no graphics card is needed. | [Depth 1.0.0](https://github.com/RRaz/Filters-Downloads/releases/tag/depth-1.0.0) | [Notes (PDF)](https://rraz.github.io/Filters/depth-notes.pdf) |
+| RRAZ Save DNG | Saves a 16-bit image as a DNG, so a TIFF can be opened in the Develop persona and developed again later. | [Save DNG 1.0.0](https://github.com/RRaz/Filters-Downloads/releases/tag/savedng-1.0.0) | No installer: two files to copy |
+
+## TIFF and raw files
+
+A TIFF opens as a finished picture: Affinity edits its pixels, and an earlier
+state survives only because you saved a copy under another name.
+
+A raw file opens in the Develop persona. Exposure, white balance and lens
+corrections stay adjustable, the settings are kept with the image, and a raw
+layer placed in a document can be developed again later. A TIFF has no raw data
+behind it, so it cannot be opened that way.
+
+**RRAZ Save DNG writes the 16-bit image as a raw file**, which is what makes the
+Develop persona, and later re-development, possible for a picture that started
+as a TIFF. It does not add dynamic range the TIFF never had.
 
 ## Installing a filter
 

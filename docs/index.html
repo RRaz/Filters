@@ -59,7 +59,7 @@
 <header>
   <div class="wrap">
     <h1>RRAZ filters for Affinity 3</h1>
-    <div class="sub">Standalone filters for Windows 10 and 11 (64-bit) &nbsp;·&nbsp; each with its own installer</div>
+    <div class="sub">Standalone filters for Windows 10 and 11 (64-bit)</div>
   </div>
 </header>
 
@@ -91,6 +91,21 @@
     <p class="sample">Sample image used in the notes: <a href="IMG_1763.jpg">IMG_1763.jpg</a> (JPEG, 5&nbsp;MB)</p>
   </div>
 
+  <div class="card">
+    <h3>RRAZ Save DNG</h3>
+    <p class="needs">Saves a 16-bit image as a DNG, so a TIFF can be opened in the Develop persona and developed without the edits being written into the pixels.</p>
+    <div class="links">
+      <a class="button" href="https://github.com/RRaz/Filters-Downloads/releases/tag/savedng-1.0.0">Download package (one zip)</a>
+    </div>
+    <p class="muted">No installer: the zip holds two files to copy into the plug-in folder. See below.</p>
+  </div>
+
+  <h2>TIFF and raw files</h2>
+  <p>A TIFF opens as a finished picture. Affinity edits its pixels, and an earlier state survives only because you saved a copy under another name.</p>
+  <p>A raw file opens in the Develop persona. Exposure, white balance and lens corrections stay adjustable, the settings are kept with the image, and a raw layer placed in a document can be developed again later. A TIFF has no raw data behind it, so it cannot be opened that way.</p>
+  <p><strong>Save DNG writes the 16-bit image as a raw file</strong>, which is what makes the Develop persona, and later re-development, possible for a picture that started as a TIFF.</p>
+  <p class="muted">It does not add dynamic range the TIFF never had: the DNG starts from the same 16 bits. What changes is how the file may be edited, not how much is in it.</p>
+
   <h2>Installing a filter</h2>
   <ol>
     <li>Click <strong>Download package</strong>. Each filter is one zip containing the setup, the runtime, the installation sheet and the checksums.</li>
@@ -101,6 +116,7 @@
     <li>When it works, delete the zip and the folder you extracted, with everything in it.</li>
   </ol>
   <p class="muted">These filters are free, so the installer is not code-signed. Windows shows a warning the first time you run it: choose <strong>More info</strong>, then <strong>Run anyway</strong>.</p>
+  <p class="muted"><strong>Save DNG has no setup.</strong> Extract its zip and copy <code>Save DNG.8bf</code> and <code>dngsave.ini</code> into <code>%LOCALAPPDATA%\RRAZ\Affinity</code>. Restart Affinity. It then appears in the same menu: <strong>Filters &gt; Plugins &gt; RRAZ &gt; Save DNG</strong>. Run it on a 16-bit image, choose the folder, change the name if you want, and choose Save.</p>
   <p class="muted">That folder is normally <code>C:\Users\&lt;you&gt;\AppData\Local\RRAZ\Affinity</code>. You only add it once: after that, every RRAZ filter you install appears in the menu. The setup finish page shows the exact address for your account.</p>
   <p><a class="button alt" href="setup-affinity.pdf">Setting up the folder in Affinity (PDF)</a></p>
 
