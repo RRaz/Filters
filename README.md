@@ -33,6 +33,12 @@ point you left them. **RRAZ Save DNG
 writes the 16-bit image as a raw file**, so a picture that started as a TIFF can
 be edited that way. It does not add dynamic range the TIFF never had.
 
+A second use follows from the same thing. At any point the layer as it stands can
+be saved as a DNG, so the work so far travels as a raw file: it opens in any
+program that reads DNG and can be developed further there. That makes the file a
+hand-off to another editor, or a working copy kept in a form that is not tied to
+one application.
+
 ## Installing a filter
 
 1. Download the zip for the filter. It contains the setup, the runtime, the
